@@ -16,6 +16,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ESP32PixelFrame.ino" />
+    <None Include="..\README.md">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.ESP32PixelFrame.vsarduino.h">

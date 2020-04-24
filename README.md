@@ -5,14 +5,16 @@ Functionalities:
 - animate BMP files framy-byframe
 - read/write INI files
 - display arrays from PROGMEM
+- Automatic brightness control
 
 WIP:
-- Automatic brightness control
 - DHT temperatue and humidity display
 - RTC time display
+
+Planned:
 - IR remote control
 - fonts for displaying values/characters
 
 
-master is currently euqal to dev
+dev is currently ahead of master
 -
