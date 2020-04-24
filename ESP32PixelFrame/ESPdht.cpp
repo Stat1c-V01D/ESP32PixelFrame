@@ -2,6 +2,7 @@
 
 ESPdht::ESPdht()
 {
+	Serial.println("ESPdht constructed");
 	init();
 }
 
@@ -11,6 +12,7 @@ ESPdht::~ESPdht()
 
 void ESPdht::init()
 {
+	Serial.println("ESPdht init");
 	_dht.begin();
 	delay(100);
 	_dht.temperature().getSensor(&_sensor);
@@ -43,6 +45,7 @@ void ESPdht::init()
 
 void ESPdht::read()
 {
+	Serial.println("ESPdht read");
 	_dht.temperature().getEvent(&_event);
 	if (isnan(_event.temperature)) {
 		Serial.println(F("Error reading temperature!"));
@@ -74,5 +77,7 @@ void ESPdht::read()
 
 void ESPdht::update()
 {
+	Serial.println("ESPdht update");
+	read();
 	//TODO [CODE] display Temperature and Humidity
 }

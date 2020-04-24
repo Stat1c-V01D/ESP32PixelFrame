@@ -137,6 +137,7 @@ void Matrix::update() {
 
 void Matrix::readButtons()
 {
+	//TODO [CODE] assign interrupt or read periodically and handle input
 #ifdef USE_BUTTONS
 	int reading;
 	reading = digitalRead(BUTTON1_PIN);

@@ -2,7 +2,7 @@
 //setup the dimensions of the LED matrix
 #define MATRIX_WIDTH   16
 #define MATRIX_HEIGHT  16 
-#define MATRIX_ROTATION 90 // 0 -- 90 -- 180  -- 260
+#define MATRIX_ROTATION 90 // 0 -- 90 -- 180  -- 270
 //#define MATRIX_POWERLIMIT
 
 //setup FastLED
@@ -35,16 +35,25 @@
 #define SD_PIN  4
 
 //activates automatic brightness control 
-//#define USE_LS
+#define USE_LS
 #define LS_PIN 34
 
 //activates clock mode
-//#define USE_RTC_CLOCK 
+#define USE_RTC_CLOCK 
 #define DS1307 //clock type
 #define RTC_I2C_ADDRESS 0x68 // I2C adress of  RTC
+#define EEPROM_I2C_ADDRESS 0x50 // I2C address of RTCs EEPROM
+struct data
+{
+	const char* cc_SSID = "YOUR_SSID";
+	const char* cc_PASSWD = "YOUR_PASS";
+	const char* cc_ntp = "pool.ntp.org";
+	long  gmtOffset_sec = 3600;
+	int   daylightOffset_sec = 3600;
+};
 
 //display ambbient temperature and humidity in clock mode
-//#define USE_DHT_SENSOR
+#define USE_DHT_SENSOR
 #define DHT_TYPE DHT22 //dht type
 #define DHT_PIN 14 //data Pin
 

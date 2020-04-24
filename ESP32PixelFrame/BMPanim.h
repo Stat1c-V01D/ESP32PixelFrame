@@ -5,7 +5,7 @@
 class BMPanim 
 {
 public:
-	BMPanim();
+	BMPanim(Matrix *pmatrix);
 	~BMPanim();
 	void init();
 	void animate();
@@ -20,7 +20,7 @@ private:
 	CRGB _timeColor, _tempColor, _humidColor;
 	FileFunctions *_fileHelper = new FileFunctions;
 	File _bmpFile;
-	Matrix *_matrix = new Matrix;
+	Matrix *_matrix;
 	IniFile *p_ini;
 	const char *_cfgfile = "/config.ini";
 	struct animInfo

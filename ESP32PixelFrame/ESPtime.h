@@ -7,11 +7,11 @@
 class ESPtime
 {
 public:
-	ESPtime();
+	ESPtime(struct data&);
 	ESPtime(const char* cc_SSID = "NO_SSID", const char* cc_PASSWD = "NO_PASS", const char* cc_ntp = "pool.ntp.org", long cl_gmtOffsetsec = 3600, int ci_daylightOffsetsec = 3600);
 	~ESPtime();
 	void init();
-	void set();
+	void set(); //TODO [FIX] call NTP sync periodically or if new time is "less" than old time;
 	void read();
 	void update();
 protected:

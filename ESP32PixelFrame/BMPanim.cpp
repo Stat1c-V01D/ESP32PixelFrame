@@ -1,8 +1,9 @@
 #include "BMPanim.h"
 
-BMPanim::BMPanim()
+BMPanim::BMPanim(Matrix *pmatrix)
 {
 	Serial.println("BMPanim constructed");
+	_matrix = pmatrix;
 	init();
 }
 
@@ -129,7 +130,7 @@ void BMPanim::processFolder(const char * cc_path)
 		}
 		for (int i = 0; i < animation._frames; i++)
 		{
-			//TODO [FIX] break animation when Image is not processed correctly
+			//TODO [FIX] break while loop when Image is not processed correctly
 			processBMP((String(cc_path) + "/" + i +".bmp").c_str());
 			delay(animation._hold);
 		}
