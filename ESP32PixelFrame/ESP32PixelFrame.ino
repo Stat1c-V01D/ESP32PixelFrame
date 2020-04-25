@@ -21,6 +21,7 @@
 #include "IRcontrol.h"
 #endif // USE_IR_REMOTE
 
+//TODO [CODE] store time and states in I2C clock eeprom
 Matrix *mtx;
 BMPanim *bmp;
 AutoBrightness *abc;
