@@ -5,6 +5,7 @@
 */
 
 //TODO [QOL] Serial debug messages for all classes/functions
+//TODO [QOL] error handler for all classes/functions
 #include "Arduino.h"
 #include "BMPanim.h"
 //#include "font.h"
